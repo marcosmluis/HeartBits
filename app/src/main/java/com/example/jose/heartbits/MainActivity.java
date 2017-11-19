@@ -16,7 +16,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        new DatabaseDAO().connect();
+
+        new DatabaseDAO().doInBackground();
         username = (EditText) findViewById(R.id.username);
         username.setOnClickListener(this);
 

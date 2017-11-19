@@ -35,6 +35,9 @@ import android.support.v4.app.ActivityCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.util.DisplayMetrics;
 import android.util.Log;
+import android.view.ContextMenu;
+import android.view.MenuInflater;
+import android.view.View;
 import android.widget.Toast;
 
 import com.google.android.gms.common.ConnectionResult;
@@ -90,16 +93,24 @@ public final class BarcodeCaptureActivity extends AppCompatActivity
     }
 
     @Override
+    public void onCreateContextMenu(ContextMenu menu, View v, ContextMenu.ContextMenuInfo menuInfo) {
+        super.onCreateContextMenu(menu, v, menuInfo);
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.menu_procedimentos, menu);
+    }
+
+    @Override
     public void onDetectedQrCode(Barcode barcode) {
         if (barcode != null) {
-            Intent intent = new Intent();
-            intent.putExtra(BarcodeObject, barcode);
-            setResult(CommonStatusCodes.SUCCESS, intent);
-            System.out.println("String ---------------------" + barcode.displayValue);
+
+            registerForContextMenu(null);
 
             finish();
         }
     }
+
+
+
 
     // Handles the requesting of the camera permission.
     private void requestCameraPermission() {
