@@ -19,6 +19,7 @@ public class Operacao extends AppCompatActivity {
 
         Button registar = (Button) findViewById(R.id.registar);
         Button registos = (Button) findViewById(R.id.registos);
+        Button dashboard = (Button) findViewById(R.id.dashboard);
 
 
 
@@ -38,7 +39,17 @@ public class Operacao extends AppCompatActivity {
             }
         });
 
+        dashboard.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                launchDashboard();
+            }
+        });
+
     }
+
+
 
     private void launchRegistar() {
 
@@ -49,6 +60,11 @@ public class Operacao extends AppCompatActivity {
     private void launchRegistos() {
 
         Intent intent = new Intent(this, Registos.class);
+        startActivity(intent);
+    }
+
+    private void launchDashboard() {
+        Intent intent = new Intent(this, Dashboard.class);
         startActivity(intent);
     }
 }
