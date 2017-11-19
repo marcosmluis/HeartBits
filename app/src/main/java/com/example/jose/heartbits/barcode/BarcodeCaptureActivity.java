@@ -43,9 +43,9 @@ import com.google.android.gms.common.api.CommonStatusCodes;
 import com.google.android.gms.vision.MultiProcessor;
 import com.google.android.gms.vision.barcode.Barcode;
 import com.google.android.gms.vision.barcode.BarcodeDetector;
-import com.varvet.barcodereadersample.R;
-import com.varvet.barcodereadersample.camera.CameraSource;
-import com.varvet.barcodereadersample.camera.CameraSourcePreview;
+import com.example.jose.heartbits.R;
+import com.example.jose.heartbits.camera.CameraSource;
+import com.example.jose.heartbits.camera.CameraSourcePreview;
 
 import java.io.IOException;
 
