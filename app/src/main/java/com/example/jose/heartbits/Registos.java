@@ -2,9 +2,7 @@ package com.example.jose.heartbits;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-<<<<<<< HEAD
-=======
-import android.view.View;
+
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListView;
@@ -12,7 +10,6 @@ import android.widget.ListView;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
->>>>>>> 1ac26af2704a4c8ba0176c752ac3694fead4639f
 
 
 
