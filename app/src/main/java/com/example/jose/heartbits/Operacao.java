@@ -6,6 +6,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 
+import com.example.jose.heartbits.barcode.BarcodeCaptureActivity;
+
 
 public class Operacao extends AppCompatActivity {
 
@@ -16,6 +18,7 @@ public class Operacao extends AppCompatActivity {
         setContentView(R.layout.operacao);
 
         Button registar = (Button) findViewById(R.id.registar);
+        Button registos = (Button) findViewById(R.id.registos);
 
 
 
@@ -27,11 +30,19 @@ public class Operacao extends AppCompatActivity {
         }
         });
 
+        registar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                launchRegistar();
+            }
+        });
+
     }
 
     private void launchRegistar() {
 
-        Intent intent = new Intent(this, Registos.class);
+        Intent intent = new Intent(this, BarcodeCaptureActivity.class);
         startActivity(intent);
     }
 

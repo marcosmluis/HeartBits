@@ -95,6 +95,8 @@ public final class BarcodeCaptureActivity extends AppCompatActivity
             Intent intent = new Intent();
             intent.putExtra(BarcodeObject, barcode);
             setResult(CommonStatusCodes.SUCCESS, intent);
+            System.out.println("String ---------------------" + barcode.displayValue);
+
             finish();
         }
     }
