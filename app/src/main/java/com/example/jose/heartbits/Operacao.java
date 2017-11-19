@@ -22,7 +22,6 @@ public class Operacao extends AppCompatActivity {
         Button dashboard = (Button) findViewById(R.id.dashboard);
 
 
-
         registar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
