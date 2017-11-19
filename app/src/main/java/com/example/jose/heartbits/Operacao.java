@@ -30,11 +30,11 @@ public class Operacao extends AppCompatActivity {
         }
         });
 
-        registar.setOnClickListener(new View.OnClickListener() {
+        registos.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
-                launchRegistar();
+                launchRegistos();
             }
         });
 
@@ -46,4 +46,9 @@ public class Operacao extends AppCompatActivity {
         startActivity(intent);
     }
 
+    private void launchRegistos() {
+
+        Intent intent = new Intent(this, Registos.class);
+        startActivity(intent);
+    }
 }
