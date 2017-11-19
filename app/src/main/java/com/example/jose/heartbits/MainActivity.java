@@ -21,11 +21,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         login = (Button) findViewById(R.id.login);
 
+
+
         login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
-                launchRegistos();
+                launchOperacao();
             }
         });
     }
@@ -37,9 +39,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         }
     }
 
-    private void launchRegistos() {
+    private void launchOperacao() {
 
-        Intent intent = new Intent(this, Registos.class);
+        Intent intent = new Intent(this, Operacao.class);
         startActivity(intent);
     }
 }
